@@ -11,7 +11,7 @@ import org.testng.ITestResult;
 /**
  * CustomTestSuiteListener listens to the events related to a test suite.
  * 
- * @author Bharat Mehta
+ * @author ANIL
  * 
  */
 public class CustomTestSuiteListener implements ITestListener

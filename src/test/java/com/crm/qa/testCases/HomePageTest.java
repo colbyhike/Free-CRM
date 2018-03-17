@@ -1,7 +1,5 @@
 package com.crm.qa.testCases;
 
-import java.io.IOException;
-
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;

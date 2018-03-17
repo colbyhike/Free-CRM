@@ -38,6 +38,7 @@ public class EachTestRunFileAppender extends FileAppender
 		super(layout, filename);
 	}
 
+	@Override
 	public void activateOptions()
 	{
 		if (fileName != null)

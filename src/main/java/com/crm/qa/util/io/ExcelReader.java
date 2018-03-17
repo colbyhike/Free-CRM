@@ -232,7 +232,7 @@ public class ExcelReader
 		Iterator<String> iterator = headerList.iterator();
 		while (iterator.hasNext())
 		{
-			String value = (String) iterator.next();
+			String value = iterator.next();
 			if (value.equals(columnName))
 			{
 				columnIndex = headerList.indexOf(columnName);
@@ -293,7 +293,7 @@ public class ExcelReader
 		Iterator<String> iterator = headerList.iterator();
 		while (iterator.hasNext())
 		{
-			String value = (String) iterator.next();
+			String value = iterator.next();
 			if (value.equals(columnName))
 			{
 				columnIndex = headerList.indexOf(columnName);
