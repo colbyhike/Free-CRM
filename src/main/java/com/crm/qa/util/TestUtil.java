@@ -7,15 +7,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import com.crm.qa.base.TestBase;
-
-public class TestUtil extends TestBase {
+public class TestUtil  {
+	public static WebDriver driver;
 	public static long PAGE_LOAD_TIMEOUT = 20;
 	public static long IMPLICIT_WAIT = 10;
 	
-	public void brokenLinkTest() throws IOException{
+	public static void brokenLinkTest(Object obj, WebDriver driver) throws IOException{
 		//1. Get the list of all the links and images.
 		
 				List<WebElement> linkList = driver.findElements(By.tagName("a"));

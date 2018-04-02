@@ -1,13 +1,18 @@
 package com.crm.qa.pages;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.crm.qa.base.LoginPageConstants;
 import com.crm.qa.base.HomePageConstants;
+import com.crm.qa.base.LoginPageConstants;
 import com.crm.qa.base.TestBase;
+import com.crm.qa.util.*;
+import com.crm.qa.webdriver.util.WebDriverUtil;
+import com.crm.qa.webdriver.util.WebDriverUtilException;
 
 public class HomePage extends TestBase implements LoginPageConstants, HomePageConstants {
 	
@@ -96,8 +101,9 @@ public class HomePage extends TestBase implements LoginPageConstants, HomePageCo
 		return new CompaniesPage();
 	}
 	
-	public ContactsPage clickOnContactsLink(){
-		contactsLink.click();
+	public ContactsPage clickOnContactsLink() throws WebDriverUtilException{
+		//contactsLink.click();
+		WebDriverUtil.findElementByClassName(driver, NEW_DEAL);
 		return new ContactsPage();
 	}
 	
@@ -152,4 +158,11 @@ public class HomePage extends TestBase implements LoginPageConstants, HomePageCo
 		return true;
 		
 	}
+	 
+	public void brokenLinkOnPage() throws IOException{
+		HomePage homePage = new HomePage();
+		TestUtil.brokenLinkTest(homePage, driver);
+	}
+
+	
 }
